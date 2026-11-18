@@ -1,0 +1,11 @@
+Firebase সেটআপ (একবারের কাজ) - প্রজেক্ট: amar-dokhan-b738a
+-----------------------------------------------------------
+১) Authentication > Sign-in method > Google  : চালু (Enable)
+২) Authentication > Settings > Authorized domains : saifulmine27.github.io যোগ করুন
+৩) Firestore Database বানান (Standard edition, Production mode)
+৪) Firestore > Rules ট্যাবে firestore.rules ফাইলের লেখা বসিয়ে Publish করুন
+   সাবধান: প্রজেক্টে অন্য অ্যাপের নিয়ম থাকলে মুছবেন না, শুধু "match /users/{uid} { ... }" অংশ যোগ করুন।
+৫) Google Cloud Console > APIs & Services > Credentials > ব্রাউজার key:
+   Application restrictions = Websites
+     https://saifulmine27.github.io/*
+     https://amar-dokhan-b738a.firebaseapp.com/*

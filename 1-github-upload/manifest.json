@@ -1,0 +1,25 @@
+{
+  "id": "/Dait-Traking/",
+  "name": "ডায়েট ট্র্যাকার",
+  "short_name": "ডায়েট",
+  "description": "বাংলাদেশি খাবারের ক্যালরি, প্রোটিন, ওজন ও ব্যায়াম ট্র্যাকার",
+  "lang": "bn",
+  "dir": "ltr",
+  "start_url": "./?source=app",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0ea371",
+  "theme_color": "#0ea371",
+  "categories": ["health", "fitness", "lifestyle"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "খাবার যোগ করুন", "short_name": "খাবার", "url": "./?tab=add&source=shortcut", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "ব্যায়াম", "short_name": "ব্যায়াম", "url": "./?tab=act&source=shortcut", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "রিপোর্ট", "short_name": "রিপোর্ট", "url": "./?tab=rep&source=shortcut", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

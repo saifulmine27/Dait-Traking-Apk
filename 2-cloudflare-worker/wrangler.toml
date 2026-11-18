@@ -1,0 +1,16 @@
+# ঐচ্ছিক: Cloudflare-এ ডিপ্লয় করার CLI ফাইল (wrangler ব্যবহার করলে)।
+# ড্যাশবোর্ডে কোড পেস্ট করলে এটা লাগে না।
+name = "diet-tracker-ai"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+FIREBASE_PROJECT_ID = "amar-dokhan-b738a"
+ALLOWED_ORIGIN = "https://saifulmine27.github.io"
+
+# Secret (এই ফাইলে লিখবেন না, কমান্ড দিয়ে বসান):
+#   npx wrangler secret put GEMINI_API_KEY
+# ঐচ্ছিক দৈনিক সীমা: KV namespace বানিয়ে নিচে বসান
+# [[kv_namespaces]]
+# binding = "RL"
+# id = "আপনার-KV-ID"

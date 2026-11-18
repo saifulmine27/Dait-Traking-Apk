@@ -1,0 +1,25 @@
+APK / Android অ্যাপ বানানোর উপায়
+=================================
+সবচেয়ে সহজ (কোনো কোড বা Android Studio ছাড়া): ফোনের Chrome থেকে ইনস্টল
+  সাইট খুলুন > ওজন ট্যাবে "অ্যাপ ইনস্টল করুন" বা Chrome মেনু ⋮ > অ্যাপ ইনস্টল করুন।
+  এতে Chrome নিজেই আসল অ্যাপ (WebAPK) বানিয়ে দেয়: আইকন, পূর্ণ পর্দা, ঠিকানার বার ছাড়া।
+
+নিজস্ব APK ফাইল চাইলে (বন্ধুকে ফাইল পাঠানো বা Play Store):
+  ১) pwabuilder.com খুলে লিখুন:  https://saifulmine27.github.io/Dait-Traking/
+  ২) Start > Package for stores > Android > প্যাকেজ আইডি দিন (যেমন com.saifulmine27.diettracker)
+     "Signing key: Create new" বেছে Download করুন।
+  ৩) ডাউনলোড হওয়া ZIP-এ APK/AAB আর signing.keystore থাকবে। keystore ফাইল আর পাসওয়ার্ড
+     নিরাপদ জায়গায় রাখুন, হারালে অ্যাপ আপডেট করা যাবে না।
+  ৪) পুরো-পর্দায় (ঠিকানার বার ছাড়া) চালাতে হলে ডোমেইন যাচাই লাগে:
+       - GitHub-এ saifulmine27.github.io নামে নতুন repository খুলুন
+       - তাতে .well-known/assetlinks.json ফাইল রাখুন (এই ফোল্ডারের template দেখুন,
+         PWABuilder-এর দেওয়া package name আর SHA256 fingerprint বসান)
+       - একটা খালি .nojekyll ফাইলও রাখুন
+       - যাচাই: https://saifulmine27.github.io/.well-known/assetlinks.json খুলে দেখুন
+     এটা না করলেও অ্যাপ চলবে, শুধু ওপরে ঠিকানার বার দেখা যাবে।
+  ৫) APK ফোনে ইনস্টল করতে "অজানা উৎস থেকে ইনস্টল" অনুমতি লাগবে।
+  Google Play-তে দিতে ডেভেলপার অ্যাকাউন্ট (এককালীন প্রায় $২৫) লাগে।
+
+কেন সাধারণ WebView অ্যাপ (Capacitor ইত্যাদি) নয়:
+  Google সাইন ইন এমবেড করা ব্রাউজারে আটকায়, আর কণ্ঠে খাবার বলা চলে না।
+  এই পথে অ্যাপ Chrome-এর ভেতরে চলে, তাই সব ফিচার ঠিক থাকে।
